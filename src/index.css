@@ -24,3 +24,16 @@ body {
   min-height: 100vh;
 }
 
+.wrapper-books {
+  view-transition-name: 'wrapper-books'
+}
+
+::view-transition-old('wrapper-books'),
+::view-transition-new('wrapper-books') {
+  animation-duration: 2s;
+}
+
+::view-transition-old('title'),
+::view-transition-new('title') {
+  animation-duration: 1s;
+}

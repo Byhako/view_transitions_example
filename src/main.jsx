@@ -4,8 +4,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import App from './App.jsx'
-import BookPage from './BookPage.jsx'
+import App from './pages/App.jsx'
+import BookPage from './pages/BookPage.jsx'
+import NoFound from './pages/NoFound.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: "/book",
+    path: "/:book",
     element: <BookPage />
+  },
+  {
+    path: "/nofound",
+    element: <NoFound />
   },
 ]);
 
